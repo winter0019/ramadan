@@ -1,0 +1,12 @@
+{
+  "name": "ramadan-timings",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel public/index.html",
+    "build": "parcel build public/index.html --public-url ./",
+    "predeploy": "npm run build"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}

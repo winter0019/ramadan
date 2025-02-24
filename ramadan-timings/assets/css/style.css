@@ -1,0 +1,22 @@
+/* Add to existing styles */
+.loading {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+}
+
+.error-message {
+    color: #e74c3c;
+    text-align: center;
+    padding: 1rem;
+}
+
+.geolocation-btn {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem;
+}

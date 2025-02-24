@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Previous meta tags and styles -->
+    <title>Ramadan 2025 - African Prayer Times</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Ramadan 2025 Prayer Times</h1>
+            <div class="timer" id="ramadan-countdown"></div>
+            <p>Days until Eid al-Fitr</p>
+        </header>
+
+        <!-- Updated Country Selector with African Nations -->
+        <div class="location-selector">
+            <select id="continent-select">
+                <option value="africa">Africa</option>
+                <option value="asia">Asia</option>
+                <option value="europe">Europe</option>
+                <option value="americas">Americas</option>
+            </select>
+            
+            <select id="country-select">
+                <!-- North Africa -->
+                <option value="EG">Egypt</option>
+                <option value="MA">Morocco</option>
+                <option value="DZ">Algeria</option>
+                <option value="TN">Tunisia</option>
+                <option value="LY">Libya</option>
+                
+                <!-- West Africa -->
+                <option value="NG">Nigeria</option>
+                <option value="GH">Ghana</option>
+                <option value="SN">Senegal</option>
+                <option value="ML">Mali</option>
+                <option value="CI">Ivory Coast</option>
+                
+                <!-- East Africa -->
+                <option value="ET">Ethiopia</option>
+                <option value="KE">Kenya</option>
+                <option value="SO">Somalia</option>
+                <option value="SD">Sudan</option>
+                <option value="TZ">Tanzania</option>
+                
+                <!-- Southern Africa -->
+                <option value="ZA">South Africa</option>
+                <option value="ZW">Zimbabwe</option>
+                <option value="MZ">Mozambique</option>
+                <option value="ZM">Zambia</option>
+            </select>
+        </div>
+
+        <!-- Rest of the content remains same -->
+    </div>
+
+    <script>
+        // Updated for Ramadan 2025
+        const RAMADAN_START = new Date('2025-02-28');
+        const EID_AL_FITR = new Date('2025-03-30');
+
+        // Sample African prayer times (replace with API data)
+        const prayerTimes = {
+            africa: {
+                EG: { // Egypt
+                    fajr: "4:30 AM",
+                    sunrise: "6:00 AM",
+                    dhuhr: "12:15 PM",
+                    asr: "3:30 PM",
+                    maghrib: "6:15 PM",
+                    isha: "7:45 PM"
+                },
+                NG: { // Nigeria
+                    fajr: "5:00 AM",
+                    sunrise: "6:30 AM",
+                    dhuhr: "12:45 PM",
+                    asr: "4:00 PM",
+                    maghrib: "6:45 PM",
+                    isha: "8:00 PM"
+                },
+                ZA: { // South Africa
+                    fajr: "5:15 AM",
+                    sunrise: "6:45 AM",
+                    dhuhr: "1:00 PM",
+                    asr: "4:15 PM",
+                    maghrib: "7:00 PM",
+                    isha: "8:15 PM"
+                }
+                // Add more countries...
+            }
+        };
+
+        // Update countdown calculation for 2025
+        function updateCountdowns() {
+            const now = new Date();
+            const ramadanDays = Math.floor((now - RAMADAN_START) / (1000 * 60 * 60 * 24));
+            const eidCountdown = Math.ceil((EID_AL_FITR - now) / (1000 * 60 * 60 * 24));
+            
+            document.getElementById('ramadan-countdown').textContent = 
+                `${ramadanDays} Days | ${eidCountdown} to Eid`;
+        }
+
+        // Rest of the script remains similar
+    </script>
+</body>
+</html>
