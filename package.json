@@ -1,0 +1,23 @@
+{
+  "name": "ramadan-timings",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server.js",
+    "client": "parcel public/index.html",
+    "build": "parcel build public/index.html --public-url ./",
+    "predeploy": "npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.9",
+    "parcel": "^2.13.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
